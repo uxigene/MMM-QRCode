@@ -1,0 +1,20 @@
+.qrcode {
+
+}
+    .qrcode__image {
+        margin-bottom: 10px;
+    }
+
+    .qrcode__text {
+        font-size: 16px;
+        font-weight: normal;
+        color: #aaa;
+        word-break: break-all;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+        .qrcode__text > span {
+            color: #fff;
+            /*font-weight: 100;*/
+        }
