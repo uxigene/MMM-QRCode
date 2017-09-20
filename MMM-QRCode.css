@@ -11,10 +11,8 @@
         color: #aaa;
         word-break: break-all;
         line-height: 1.5;
-        text-align: center;
     }
 
         .qrcode__text > span {
             color: #fff;
-            /*font-weight: 100;*/
         }

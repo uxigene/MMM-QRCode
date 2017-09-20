@@ -13,7 +13,6 @@ Module.register("MMM-QRCode", {
 
 	defaults: {
 		text       : 'https://github.com/MarinescuEvghenii/MMM-QRCode',
-		prefix     : '',
 		colorDark  : "#fff",
 		colorLight : "#000",
 		imageSize  : 150,
@@ -58,7 +57,7 @@ Module.register("MMM-QRCode", {
 			const textEl = document.createElement("div");
 			textEl.classList.add('qrcode__text');
 			textEl.setAttribute('style', 'max-width:' + this.config.imageSize + 'px;');
-			textEl.innerHTML = '<span>' + this.config.prefix + '</span>' + this.config.text;
+			textEl.innerHTML = this.config.text;
 			wrapperEl.appendChild(textEl);
 		}
 
