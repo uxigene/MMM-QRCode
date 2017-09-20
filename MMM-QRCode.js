@@ -1,7 +1,7 @@
 /* global Module */
 
 /* Magic Mirror
- * Module: Luxembourg Airport
+ * Module: QRCode
  *
  * By Evghenii Marinescu https://github.com/MarinescuEvghenii/
  * MIT Licensed.
@@ -56,7 +56,6 @@ Module.register("MMM-QRCode", {
 		if(this.config.showRaw) {
 			const textEl = document.createElement("div");
 			textEl.classList.add('qrcode__text');
-			textEl.setAttribute('style', 'max-width:' + this.config.imageSize + 'px;');
 			textEl.innerHTML = this.config.text;
 			wrapperEl.appendChild(textEl);
 		}

@@ -1,18 +1,15 @@
 .qrcode {
-
+    line-height: 0;
 }
     .qrcode__image {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+        display: inline-block;
     }
 
     .qrcode__text {
         font-size: 16px;
         font-weight: normal;
         color: #aaa;
-        word-break: break-all;
         line-height: 1.5;
+        max-width: 400px;
     }
-
-        .qrcode__text > span {
-            color: #fff;
-        }
