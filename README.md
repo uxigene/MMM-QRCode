@@ -40,5 +40,5 @@ The following property can be configured:
 | -----------|-------------------------|:-------------:|
 | colorDark  | Draw color              | "#fff"        |
 | colorLight | Background color        | "#000"        |
-| imageSize  | Size on the image in px | 150           |
+| imageSize  | Size of the image in px | 150           |
 | showRaw    | Show raw text       | true          |
