@@ -43,3 +43,13 @@ The following property can be configured:
 | imageSize  | Size of the image in px | 150           |
 | showRaw    | Show raw text           | true          |
 | text       | The text to be encoded  |               |
+
+## WIFI QR Code
+
+A QR code can be scanned to automatically connect a mobile device to a wifi network. 
+
+```
+text: "WIFI:S:<wifi id>;T:<type>;P:<password>;;",
+```
+
+The `type` can be one of `WPA`, ...
