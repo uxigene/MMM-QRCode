@@ -38,4 +38,4 @@ The following property can be configured:
 | colorLight | Background color        | "#000"        |
 | imageSize  | Size of the image in px | 150           |
 | showRaw    | Show raw text           | true          |
-| text       | The text to be encoded  | 'Your Text'   |
+| text       | The text to be encoded  |               |
