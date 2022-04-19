@@ -1,5 +1,5 @@
 # MMM-QRCode
-QRCode module for MagicMirror². Show QRCode image of encoded text.
+QRCode module for [MagicMirror²](https://magicmirror.builders/). Show QRCode image of encoded text.
 
 ## Screenshot
 ![](.github/example.png)
