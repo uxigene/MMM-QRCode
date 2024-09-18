@@ -1,4 +1,4 @@
-/* global Module */
+/* global Module QRCode */
 
 /* MagicMirror²
  * Module: QRCode
@@ -7,37 +7,36 @@
  * MIT Licensed.
  */
 
-'use strict';
 
 Module.register("MMM-QRCode", {
 
 	defaults: {
-		text       : 'https://github.com/uxigene/MMM-QRCode',
+		text       : "https://github.com/uxigene/MMM-QRCode",
 		colorDark  : "#fff",
 		colorLight : "#000",
 		imageSize  : 150,
 		showRaw    : true
 	},
 
-	getStyles: function() {
+	getStyles () {
 		return ["MMM-QRCode.css"];
 	},
 
-	getScripts: function() {
+	getScripts () {
 		return [this.file("node_modules/qrcode/build/qrcode.js")];
 	},
 
 
-	start: function() {
-		this.config = Object.assign({}, this.defaults, this.config);
-		Log.log("Starting module: " + this.name);
+	start () {
+		this.config = { ...this.defaults,	...this.config };
+		Log.log(`Starting module: ${this.name}`);
 	},
 
-	getDom: function() {
+	getDom () {
 		const wrapperEl = document.createElement("div");
-		wrapperEl.classList.add('qrcode');
+		wrapperEl.classList.add("qrcode");
 
-		const qrcodeEl  = document.createElement("canvas");
+		const qrcodeEl = document.createElement("canvas");
 
 		const options = {
 			width: this.config.imageSize,
@@ -45,27 +44,28 @@ Module.register("MMM-QRCode", {
 				dark: this.config.colorDark,
 				light: this.config.colorLight
 			},
-			errorCorrectionLevel: 'H'
+			errorCorrectionLevel: "H"
 		};
 
 		QRCode.toCanvas(
 			qrcodeEl,
 			this.config.text,
-			options, 
-			function (error) {
-				if (error) console.error(error)
-					console.log('success!');
-		})
+			options,
+			(error) => {
+				if (error) { Log.error(`${this.name}: Error creating QRCode: ${error}`); }
+				Log.log(`${this.name}: successfully created QRCode.`);
+			}
+		);
 
-		const imageEl  = document.createElement("div");
-		imageEl.classList.add('qrcode__image');
+		const imageEl = document.createElement("div");
+		imageEl.classList.add("qrcode__image");
 		imageEl.appendChild(qrcodeEl);
 
 		wrapperEl.appendChild(imageEl);
 
-		if(this.config.showRaw) {
+		if (this.config.showRaw) {
 			const textEl = document.createElement("div");
-			textEl.classList.add('qrcode__text');
+			textEl.classList.add("qrcode__text");
 			textEl.innerHTML = this.config.text;
 			wrapperEl.appendChild(textEl);
 		}
