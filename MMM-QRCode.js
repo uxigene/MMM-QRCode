@@ -24,7 +24,7 @@ Module.register("MMM-QRCode", {
 	},
 
 	getScripts: function() {
-		return ["qrcode.min.js"];
+		return [this.file("node_modules/qrcode/build/qrcode.js")];
 	},
 
 
@@ -37,15 +37,25 @@ Module.register("MMM-QRCode", {
 		const wrapperEl = document.createElement("div");
 		wrapperEl.classList.add('qrcode');
 
-		const qrcodeEl  = document.createElement("div");
-		new QRCode(qrcodeEl, {
-			text: this.config.text,
+		const qrcodeEl  = document.createElement("canvas");
+
+		const options = {
 			width: this.config.imageSize,
-			height: this.config.imageSize,
-			colorDark : this.config.colorDark,
-			colorLight : this.config.colorLight,
-			correctLevel : QRCode.CorrectLevel.H
-		});
+			color: {
+				dark: this.config.colorDark,
+				light: this.config.colorLight
+			},
+			errorCorrectionLevel: 'H'
+		};
+
+		QRCode.toCanvas(
+			qrcodeEl,
+			this.config.text,
+			options, 
+			function (error) {
+				if (error) console.error(error)
+					console.log('success!');
+		})
 
 		const imageEl  = document.createElement("div");
 		imageEl.classList.add('qrcode__image');
