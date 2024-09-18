@@ -14,7 +14,7 @@ Open up your terminal and simply paste the following code
 cd ~/MagicMirror/modules
 git clone https://github.com/uxigene/MMM-QRCode
 cd MMM-QRCode
-npm i
+npm install
 ```
 
 ## Update
@@ -24,6 +24,7 @@ Go to the module’s folder inside your MagicMirror's module folder and pull the
 ```bash
 cd ~/MagicMirror/modules/MMM-QRCode
 git pull
+npm install
 ```
 
 ## Configuration
