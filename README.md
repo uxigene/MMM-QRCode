@@ -8,7 +8,7 @@ QRCode module for [MagicMirror²](https://magicmirror.builders/). Show QRCode im
 Open up your terminal and simply paste the following code
 ```sh
 cd ~/MagicMirror/modules
-git clone https://github.com/MarinescuEvghenii/MMM-QRCode.git
+git clone https://github.com/uxigene/MMM-QRCode
 cd MMM-QRCode && npm i
 ```
 ## Using the module

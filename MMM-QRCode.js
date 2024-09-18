@@ -3,7 +3,7 @@
 /* Magic Mirror
  * Module: QRCode
  *
- * By Evghenii Marinescu https://github.com/MarinescuEvghenii/
+ * By Evghenii Marinescu https://github.com/uxigene/
  * MIT Licensed.
  */
 
@@ -12,7 +12,7 @@
 Module.register("MMM-QRCode", {
 
 	defaults: {
-		text       : 'https://github.com/MarinescuEvghenii/MMM-QRCode',
+		text       : 'https://github.com/uxigene/MMM-QRCode',
 		colorDark  : "#fff",
 		colorLight : "#000",
 		imageSize  : 150,
