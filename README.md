@@ -22,7 +22,7 @@ To configure the module simply use your favourite editor `vim` or `nano` and sim
 		text: 'Your Message', // enter your message here.
 		showRaw: true, // true = to show the text, false = to hide the text.
 		imageSize: 150, // size is in px (both the height and with are equal).
-		colorDark: "#fff" // set qrcode px color.
+		colorDark: "#fff", // set qrcode px color.
 		colorLight: "#000" // set backgroud background color(by default color is BLACK).
 	}
 },
